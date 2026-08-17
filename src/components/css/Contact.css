@@ -1,0 +1,76 @@
+/* --------------------------------
+   Contact
+-------------------------------- */
+
+.contact {
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 700px;
+
+  display: flex;
+  align-items: center;
+
+  border-top: 1px solid var(--border-light);
+}
+
+.contact-glow {
+  position: absolute;
+
+  width: 800px;
+  height: 500px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  filter: blur(120px);
+
+  pointer-events: none;
+}
+
+.contact-content {
+  position: relative;
+
+  max-width: 900px;
+}
+
+.contact-content h2 {
+  margin: 0;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: clamp(60px, 10vw, 130px);
+
+  font-weight: 500;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.07em;
+}
+
+.contact-content h2 span {
+  color: #444;
+}
+
+.contact-content p {
+  max-width: 570px;
+
+  margin: 40px 0;
+
+  color: #777;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+.contact-button {
+  padding: 16px 24px;
+}

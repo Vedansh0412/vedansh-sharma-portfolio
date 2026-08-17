@@ -1,0 +1,669 @@
+/* =========================================================
+   SKILLS — 3D TECHNOLOGY GLOBE
+========================================================= */
+
+.skills-section {
+  position: relative;
+
+  margin-top: 28px;
+
+  min-height: 760px;
+
+  padding: 48px 32px 24px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.075);
+
+  border-radius: 32px;
+
+  background:
+    radial-gradient(
+      circle at 58% 46%,
+      rgba(89, 63, 180, 0.085),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 50% 55%,
+      rgba(60, 90, 255, 0.035),
+      transparent 48%
+    ),
+    #050505;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.skills-heading {
+  position: relative;
+
+  z-index: 20;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 60px;
+}
+
+.skills-heading .block-number {
+  display: block;
+
+  margin-bottom: 22px;
+
+  color: #7461ff;
+
+  font-size: 11px;
+
+  letter-spacing: 0.12em;
+}
+
+.skills-heading h3 {
+  margin: 0;
+
+  max-width: 330px;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: clamp(34px, 4vw, 52px);
+
+  font-weight: 500;
+
+  line-height: 0.96;
+
+  letter-spacing: -0.055em;
+
+  color: #f4f4f5;
+}
+
+.skills-heading p {
+  max-width: 320px;
+
+  margin: 35px 20px 0 0;
+
+  color: #666;
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   GLOBE CONTAINER
+========================================================= */
+
+.skills-globe-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  height: 600px;
+
+  margin-top: -5px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  perspective: 1500px;
+
+  perspective-origin: 50% 48%;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   SPHERICAL LIGHT
+========================================================= */
+
+.skills-globe-wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 540px;
+  height: 540px;
+
+  transform:
+    translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 36% 30%,
+      rgba(145, 125, 255, 0.075),
+      rgba(73, 48, 170, 0.035) 38%,
+      transparent 70%
+    );
+
+  box-shadow:
+    inset 0 0 80px rgba(130, 105, 255, 0.035),
+    0 0 100px rgba(88, 62, 220, 0.055);
+
+  pointer-events: none;
+
+  z-index: -2;
+}
+
+
+/* =========================================================
+   GLOBE
+========================================================= */
+
+.skills-globe {
+  position: relative;
+
+  width: 1px;
+  height: 1px;
+
+  transform-style: preserve-3d;
+
+  transform-origin: center center;
+
+  will-change: transform;
+
+  /*
+   * This is extremely important for the spherical effect.
+   */
+  backface-visibility: visible;
+}
+
+
+/* =========================================================
+   GLOBE SURFACE
+========================================================= */
+
+.skills-globe::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 510px;
+  height: 510px;
+
+  transform:
+    translate(-50%, -50%)
+    translateZ(-8px);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 32% 27%,
+      rgba(255, 255, 255, 0.045),
+      rgba(93, 68, 185, 0.025) 28%,
+      rgba(20, 15, 35, 0.015) 58%,
+      transparent 72%
+    );
+
+  border: 1px solid rgba(132, 108, 255, 0.035);
+
+  box-shadow:
+    inset 35px 25px 80px rgba(255, 255, 255, 0.018),
+    inset -50px -30px 100px rgba(0, 0, 0, 0.42),
+    0 0 70px rgba(89, 62, 220, 0.035);
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+
+/* =========================================================
+   SKILL TILE
+========================================================= */
+
+.skill-tile {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 78px;
+  height: 78px;
+
+  margin-left: -39px;
+  margin-top: -39px;
+
+  transform-style: preserve-3d;
+
+  transform-origin: center center;
+
+  backface-visibility: visible;
+
+  will-change: transform;
+
+  transition:
+    filter 0.35s ease,
+    opacity 0.35s ease;
+}
+
+
+/* =========================================================
+   TILE
+========================================================= */
+
+.skill-tile-inner {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.085);
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.075),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  backdrop-filter: blur(7px);
+
+  -webkit-backdrop-filter: blur(7px);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.055),
+    0 8px 22px rgba(0, 0, 0, 0.28);
+
+  color: #8a8a90;
+
+  font-size: 8px;
+
+  text-align: center;
+
+  transform-style: preserve-3d;
+}
+
+
+/* =========================================================
+   TILE ICON
+========================================================= */
+
+.skill-tile-inner img {
+  width: 29px;
+  height: 29px;
+
+  object-fit: contain;
+
+  user-select: none;
+
+  pointer-events: none;
+
+  -webkit-user-drag: none;
+
+  opacity: 0.82;
+
+  filter:
+    saturate(0.9)
+    brightness(0.92);
+
+  transition:
+    opacity 0.3s ease,
+    filter 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* =========================================================
+   TILE HOVER
+========================================================= */
+
+.skill-tile:hover {
+  z-index: 100;
+}
+
+.skill-tile:hover .skill-tile-inner {
+  border-color: rgba(160, 140, 255, 0.4);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(125, 105, 255, 0.12),
+      rgba(255, 255, 255, 0.045)
+    );
+
+  color: #f2f2f4;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 12px 35px rgba(0, 0, 0, 0.45),
+    0 0 30px rgba(110, 85, 255, 0.12);
+}
+
+.skill-tile:hover img {
+  opacity: 1;
+
+  filter:
+    saturate(1.15)
+    brightness(1.12);
+
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   SPHERICAL EDGE VIGNETTE
+========================================================= */
+
+.skills-globe-wrapper::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 545px;
+  height: 545px;
+
+  transform:
+    translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      transparent 54%,
+      rgba(0, 0, 0, 0.025) 64%,
+      rgba(0, 0, 0, 0.22) 76%,
+      rgba(0, 0, 0, 0.62) 91%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
+
+  pointer-events: none;
+
+  z-index: 8;
+}
+
+
+/* =========================================================
+   GLOBE FLOOR SHADOW
+========================================================= */
+
+.skills-globe-shadow {
+  position: absolute;
+
+  bottom: 25px;
+  left: 50%;
+
+  width: 330px;
+  height: 55px;
+
+  transform:
+    translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(70, 45, 150, 0.28),
+      rgba(0, 0, 0, 0.65) 55%,
+      transparent 75%
+    );
+
+  filter: blur(16px);
+
+  opacity: 0.9;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   BOTTOM SKILL LIST
+========================================================= */
+
+.skills-list {
+  position: relative;
+
+  z-index: 20;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  max-width: 1150px;
+
+  margin: -5px auto 0;
+}
+
+.skills-list-item {
+  padding: 7px 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.012);
+
+  color: #555;
+
+  font-size: 9px;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.skills-list-item:hover {
+  border-color: rgba(145, 125, 255, 0.22);
+
+  background: rgba(120, 95, 255, 0.035);
+
+  color: #aaa;
+}
+
+
+/* =========================================================
+   DESKTOP — LARGER GLOBE
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .skills-globe-wrapper {
+    height: 630px;
+  }
+
+  .skills-globe-wrapper::before {
+    width: 590px;
+    height: 590px;
+  }
+
+  .skills-globe::before {
+    width: 510px;
+    height: 510px;
+  }
+
+  .skills-globe-wrapper::after {
+    width: 595px;
+    height: 595px;
+  }
+
+  .skill-tile {
+    width: 82px;
+    height: 82px;
+
+    margin-left: -41px;
+    margin-top: -41px;
+  }
+
+  .skill-tile-inner img {
+    width: 31px;
+    height: 31px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .skills-section {
+    min-height: 700px;
+
+    padding: 40px 24px 24px;
+  }
+
+  .skills-heading {
+    gap: 30px;
+  }
+
+  .skills-globe-wrapper {
+    height: 520px;
+  }
+
+  .skills-globe-wrapper::before {
+    width: 450px;
+    height: 450px;
+  }
+
+  .skills-globe::before {
+    width: 510px;
+    height: 510px;
+  }
+
+  .skills-globe-wrapper::after {
+    width: 465px;
+    height: 465px;
+  }
+
+  .skill-tile {
+    width: 68px;
+    height: 68px;
+
+    margin-left: -34px;
+    margin-top: -34px;
+  }
+
+  .skill-tile-inner img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .skills-section {
+    min-height: 620px;
+
+    padding: 32px 18px 20px;
+
+    border-radius: 24px;
+  }
+
+  .skills-heading {
+    flex-direction: column;
+
+    gap: 16px;
+  }
+
+  .skills-heading h3 {
+    font-size: 34px;
+  }
+
+  .skills-heading p {
+    margin: 0;
+
+    max-width: 400px;
+  }
+
+  .skills-globe-wrapper {
+    height: 440px;
+
+    margin-top: -5px;
+
+    transform: scale(0.78);
+  }
+
+  .skills-globe-wrapper::before {
+    width: 420px;
+    height: 420px;
+  }
+
+  .skills-globe::before {
+    width: 510px;
+    height: 510px;
+  }
+
+  .skills-globe-wrapper::after {
+    width: 425px;
+    height: 425px;
+  }
+
+  .skills-globe-shadow {
+    bottom: 10px;
+
+    width: 260px;
+  }
+
+  .skills-list {
+    margin-top: -40px;
+  }
+
+  .skills-list-item {
+    font-size: 8px;
+
+    padding: 6px 9px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .skills-globe {
+    transform: none !important;
+  }
+
+  .skill-tile,
+  .skill-tile-inner,
+  .skill-tile-inner img {
+    transition: none;
+  }
+}
