@@ -6,67 +6,67 @@ import "../components/css/About.css";
 const skills = [
   {
     name: "React",
-    icon: "../../public/Skills/react.png",
+    icon: "/Skills/react.png",
   },
   {
     name: "TypeScript",
-    icon: "../../public/Skills/typescript.png",
+    icon: "/Skills/typescript.png",
   },
   {
     name: "JavaScript",
-    icon: "../../public/Skills/javascript.png",
+    icon: "/Skills/javascript.png",
   },
   {
     name: "Node.js",
-    icon: "../../public/Skills/nodejs.png",
+    icon: "/Skills/nodejs.png",
   },
   {
     name: "Python",
-    icon: "../../public/Skills/python.png",
+    icon: "/Skills/python.png",
   },
   {
     name: "AI / ML",
-    icon: "../../public/Skills/openai.png",
+    icon: "/Skills/openai.png",
   },
   {
     name: "Git",
-    icon: "../../public/Skills/git.png",
+    icon: "/Skills/git.png",
   },
   {
     name: "Azure",
-    icon: "../../public/Skills/azure.png",
+    icon: "/Skills/azure.png",
   },
   {
     name: "Material UI",
-    icon: "../../public/Skills/mui.png",
+    icon: "/Skills/mui.png",
   },
   {
     name: "Github",
-    icon: "../../public/Skills/github.png",
+    icon: "/Skills/github.png",
   },
   {
     name: "CSS",
-    icon: "../../public/Skills/css.png",
+    icon: "/Skills/css.png",
   },
   {
     name: "HTML",
-    icon: "../../public/Skills/html.png",
+    icon: "/Skills/html.png",
   },
   {
     name: "NEXT JS",
-    icon: "../../public/Skills/nextjs.png",
+    icon: "/Skills/nextjs.png",
   },
   {
     name: "Postgress SQL",
-    icon: "../../public/Skills/postgress.png",
+    icon: "/Skills/postgress.png",
   },
   {
     name: "Tailwind CSS",
-    icon: "../../public/Skills/tailwind.png",
+    icon: "/Skills/tailwind.png",
   },
   {
     name: "VS Code",
-    icon: "../../public/Skills/vscode.png",
+    icon: "/Skills/vscode.png",
   },
 ];
 

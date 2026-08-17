@@ -41,7 +41,7 @@ function Contact() {
           </p>
 
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:mailtovedansh7@gmail.com"
             className="primary-button contact-button"
           >
             <Mail size={17} />
