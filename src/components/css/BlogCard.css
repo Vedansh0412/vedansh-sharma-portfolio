@@ -1,0 +1,339 @@
+.blog-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.012)
+    );
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+
+  border-color:
+    rgba(255, 255, 255, 0.17);
+
+  box-shadow:
+    0 30px 80px
+      rgba(0, 0, 0, 0.35);
+}
+
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.blog-card-image {
+  position: relative;
+
+  height: 230px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(90, 65, 180, 0.18),
+      transparent 60%
+    ),
+    #0b0b0d;
+}
+
+.blog-card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.7s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
+}
+
+.blog-card:hover
+.blog-card-image img {
+  transform: scale(1.05);
+}
+
+.blog-card-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 40%,
+      rgba(0, 0, 0, 0.55)
+    );
+}
+
+.blog-card-image-placeholder {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(100, 80, 200, 0.2),
+      transparent 65%
+    );
+}
+
+.blog-card-image-placeholder span {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  color: black;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-weight: 700;
+}
+
+.blog-card-number {
+  position: absolute;
+
+  top: 18px;
+  left: 20px;
+
+  z-index: 2;
+
+  color: rgba(255,255,255,0.6);
+
+  font-size: 10px;
+
+  letter-spacing: 0.15em;
+}
+
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.blog-card-content {
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+
+  padding: 26px;
+}
+
+.blog-card-meta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: #666;
+
+  font-size: 10px;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.blog-meta-divider {
+  color: #333;
+}
+
+.blog-reading-time {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+.blog-card-content h3 {
+  margin: 18px 0 12px;
+
+  color: #f2f2f4;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 26px;
+
+  font-weight: 500;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.045em;
+}
+
+.blog-card-content p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 3;
+
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   TAGS
+======================================== */
+
+.blog-card-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+
+  margin-top: 22px;
+}
+
+.blog-card-tags span {
+  padding: 6px 9px;
+
+  border: 1px solid
+    rgba(255,255,255,0.07);
+
+  border-radius: 999px;
+
+  color: #666;
+
+  font-size: 9px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.blog-card-footer {
+  margin-top: 28px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid
+    rgba(255,255,255,0.07);
+}
+
+.blog-read-button {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #ddd;
+
+  cursor: pointer;
+
+  font-size: 12px;
+
+  transition:
+    color 0.25s ease;
+}
+
+.blog-read-button:hover {
+  color: white;
+}
+
+.blog-read-button svg {
+  transition:
+    transform 0.3s ease;
+}
+
+.blog-read-button:hover svg {
+  transform:
+    translate(3px, -3px);
+}
+
+.blog-card-stats {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 18px;
+
+  color: #555;
+
+  font-size: 9px;
+
+  letter-spacing: 0.04em;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  .blog-card-image {
+    height: 200px;
+  }
+
+  .blog-card-content {
+    padding: 22px;
+  }
+
+  .blog-card-content h3 {
+    font-size: 23px;
+  }
+}

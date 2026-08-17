@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./css/Navbar.css";
@@ -22,15 +23,26 @@ const navItems = [
   },
   {
     label: "Blogs",
-    href: "#blogs",
+    href: "/blogs",
   },
 ];
 
 function Navbar() {
+  const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleNavigation = (href: string) => {
     setMobileOpen(false);
+
+    if (href === "/blogs") {
+      navigate("/blogs");
+      return;
+    }
+
+    if (window.location.pathname !== "/") {
+      navigate(`/${href}`);
+      return;
+    }
 
     document.querySelector(href)?.scrollIntoView({
       behavior: "smooth",

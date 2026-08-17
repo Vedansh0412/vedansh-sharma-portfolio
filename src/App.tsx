@@ -1,30 +1,31 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-// import Blogs from "./components/Blogs";
-import Footer from "./components/Footer";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+
+import Home from "./pages/Home";
+import Blogs from "./pages/Blogs";
 
 function App() {
   return (
-    <div className="app">
-      <Navbar />
+    <BrowserRouter>
+      <Routes>
 
-      <main>
-        <Hero />
+        {/* Main portfolio */}
+        <Route
+          path="/"
+          element={<Home />}
+        />
 
-        <About />
+        {/* Blog page */}
+        <Route
+          path="/blogs"
+          element={<Blogs />}
+        />
 
-        <Projects />
-
-        {/* <Blogs /> */}
-
-        <Contact />
-      </main>
-
-      <Footer />
-    </div>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
