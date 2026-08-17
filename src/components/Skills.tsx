@@ -73,7 +73,12 @@ function Skills({ skills }: SkillsProps) {
    * surface of a sphere instead of using rows.
    */
 
-  const radius = 245;
+  const radius =
+  window.innerWidth <= 768
+    ? 200
+    : window.innerWidth <= 1000
+      ? 205
+      : 245;
 
   /*
    * Golden angle.
