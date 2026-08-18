@@ -75,9 +75,9 @@
 .block-number {
   display: block;
 
-  margin-bottom: 55px;
+  margin-bottom: 22px;
 
-  color: #555;
+  color: #7461ff;
 
   font-size: 11px;
   letter-spacing: 0.15em;
@@ -89,8 +89,14 @@
 
   font-family: "Space Grotesk", sans-serif;
 
-  font-size: 25px;
+  font-size: clamp(34px, 4vw, 52px);  
   font-weight: 500;
+
+  line-height: 0.96;
+
+  letter-spacing: -0.055em;
+
+  color: #f4f4f5;
 }
 
 .timeline-item {

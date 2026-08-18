@@ -157,7 +157,9 @@ modern frontend architectures. Specialized in designing AI-powered developer too
 
             <h3>Education</h3>
 
-            <div className="education-item">
+            <div className="timeline-item">
+              <div className="timeline-dot" />
+              <div>
               <h4>B.Tech — Computer Science</h4>
 
               <span>Jaypee Institute of Information Technology</span>
@@ -169,6 +171,7 @@ modern frontend architectures. Specialized in designing AI-powered developer too
                 engineering, machine learning and application
                 development.
               </p>
+              </div>
             </div>
           </div>
         </div>
