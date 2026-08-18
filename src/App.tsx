@@ -6,10 +6,13 @@ import {
 
 import Home from "./pages/Home";
 import Blogs from "./pages/Blogs";
+import ScrollToTop from "./components/ScrolllToTop";
 
 function App() {
   return (
     <BrowserRouter>
+
+      <ScrollToTop />
       <Routes>
 
         {/* Main portfolio */}

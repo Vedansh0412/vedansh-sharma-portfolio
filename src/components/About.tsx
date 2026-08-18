@@ -77,55 +77,141 @@ function About() {
         <div className="section-label">01 — About me</div>
 
         <div className="about-header">
-          <motion.h2
-            className="section-title"
-            initial={{
-              opacity: 0,
-              y: 50,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-              amount: 0.3,
-            }}
-            transition={{
-              duration: 0.8,
-            }}
-          >
-            Software engineer.
-            <br />
-            <span className="muted-text">
-              AI enthusiast.
-            </span>
-            <br />
-            Builder.
-          </motion.h2>
 
-          <div className="about-summary">
-            <p>
-              Software Engineer with 2+ years of experience building scalable, customer-centric web applications using React, TypeScript, and
-modern frontend architectures. Specialized in designing AI-powered developer tools.
-            </p>
+  {/* --------------------------------
+      About introduction
+  -------------------------------- */}
 
-            <div className="about-location">
-              <MapPin size={15} />
+  <motion.div
+    className="about-heading"
+    initial={{
+      opacity: 0,
+      y: 50,
+    }}
+    whileInView={{
+      opacity: 1,
+      y: 0,
+    }}
+    viewport={{
+      once: true,
+      amount: 0.3,
+    }}
+    transition={{
+      duration: 0.8,
+    }}
+  >
+    <h2 className="section-title">
+      Software engineer.
+      <br />
 
-              <span>India</span>
-            </div>
+      <span className="muted-text">
+        AI enthusiast.
+      </span>
 
-            <a
-              href="/resume.pdf"
-              download
-              className="secondary-button"
-            >
-              Download Resume
-              <Download size={16} />
-            </a>
-          </div>
-        </div>
+      <br />
+
+      Builder.
+    </h2>
+  </motion.div>
+
+
+  {/* --------------------------------
+      Profile image
+  -------------------------------- */}
+
+  <motion.div
+    className="about-profile"
+    initial={{
+      opacity: 0,
+      y: 40,
+      scale: 0.96,
+    }}
+    whileInView={{
+      opacity: 1,
+      y: 0,
+      scale: 1,
+    }}
+    viewport={{
+      once: true,
+      amount: 0.3,
+    }}
+    transition={{
+      duration: 0.9,
+      delay: 0.15,
+      ease: [0.16, 1, 0.3, 1],
+    }}
+  >
+
+    <div className="about-profile-glow" />
+
+    <div className="about-profile-image">
+
+      <img
+        src="/profile.png"
+        alt="Vedansh Sharma — Software Engineer"
+        draggable={false}
+      />
+
+      <div className="about-profile-overlay" />
+
+    </div>
+
+  </motion.div>
+
+
+  {/* --------------------------------
+      About summary
+  -------------------------------- */}
+
+  <motion.div
+    className="about-summary"
+    initial={{
+      opacity: 0,
+      y: 40,
+    }}
+    whileInView={{
+      opacity: 1,
+      y: 0,
+    }}
+    viewport={{
+      once: true,
+      amount: 0.3,
+    }}
+    transition={{
+      duration: 0.8,
+      delay: 0.25,
+    }}
+  >
+
+    <p>
+      Software Engineer with 2+ years of experience
+      building scalable, customer-centric web
+      applications using React, TypeScript, and
+      modern frontend architectures. Specialized
+      in designing AI-powered developer tools.
+    </p>
+
+    <div className="about-location">
+      <MapPin size={15} />
+
+      <span>
+        India
+      </span>
+    </div>
+
+    <a
+      href="/resume.pdf"
+      download
+      className="secondary-button"
+    >
+      Download Resume
+
+      <Download size={16} />
+    </a>
+
+  </motion.div>
+
+</div>
 
         <div className="about-grid">
           <div className="about-block">
