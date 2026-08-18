@@ -8,7 +8,7 @@ function Contact() {
       <div className="contact-glow" />
 
       <div className="container">
-        <div className="section-label">04 — Contact</div>
+        <div className="section-label">03 — Contact</div>
 
         <motion.div
           className="contact-content"

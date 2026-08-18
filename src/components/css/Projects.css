@@ -38,7 +38,16 @@
 }
 
 .projects-header .section-label {
-  margin-bottom: 28px;
+
+  margin-bottom: 25px;
+
+  color: #7461ff;
+
+  font-size: 10px;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
 }
 
 .projects-header h2 {

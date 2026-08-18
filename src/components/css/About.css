@@ -23,6 +23,18 @@
   margin-bottom: 110px;
 }
 
+.about .section-label {
+  margin-bottom: 25px;
+
+  color: #7461ff;
+
+  font-size: 10px;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
 .muted-text {
   color: #4d4d52;
 }

@@ -15,6 +15,19 @@
   border-top: 1px solid var(--border-light);
 }
 
+.contact .section-label {
+
+  margin-bottom: 25px;
+
+  color: #7461ff;
+
+  font-size: 10px;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
 .contact-glow {
   position: absolute;
 
