@@ -17,6 +17,7 @@ import {
 } from "../services/devto";
 
 import "../components/css/Blogs.css";
+import Navbar from "../components/Navbar";
 
 function Blogs() {
   const navigate = useNavigate();
@@ -59,6 +60,9 @@ function Blogs() {
 
 
   return (
+    <div>
+    <Navbar />
+
     <main className="blogs-page">
 
       {/* ==================================
@@ -184,6 +188,7 @@ function Blogs() {
       />
 
     </main>
+    </div>
   );
 }
 
