@@ -105,7 +105,7 @@ function About() {
       <br />
 
       <span className="muted-text">
-        AI enthusiast.
+        AI enthusiast,
       </span>
 
       <br />
@@ -223,17 +223,29 @@ function About() {
               <div className="timeline-dot" />
 
               <div>
-                <h4>Software Engineer</h4>
+                <h4>Senior Software Engineer</h4>
 
                 <span>Tavant Technologies</span>
 
-                <small>2024 — Present</small>
+                <small>2024 — 2026</small>
 
                 <p>
                   Building production-grade frontend systems,
                   reporting applications and AI-assisted
                   engineering workflows.
                 </p>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-dot" />
+
+              <div>
+                <h4>Software Engineer</h4>
+
+                <span>Tavant Technologies</span>
+
+                <small>2024 — 2026</small>
               </div>
             </div>
           </div>
